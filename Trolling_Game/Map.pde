@@ -1,4 +1,5 @@
-
+int groundRight = 560;
+int groundHeight = 440;
 class Map
 {
   Map()
@@ -9,7 +10,7 @@ class Map
   pushStyle();
   //noFill();
   background(188, 191, 198);
-  line(560, 440, 40, 440); //Ground
+  line(groundRight, groundHeight, 40, groundHeight); //Ground
   line(577, 335, 477, 335); //FirstJump
   line(737, 381, 645, 381); //SecondJump
   line(753, 268, 645, 268); //ThirdJump

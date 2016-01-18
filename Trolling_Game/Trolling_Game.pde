@@ -31,4 +31,6 @@ void draw()
   xPosBall += movementX;
   yPosBall += movementY;
   resistance();
+  failure();
+ gameOver();
 }
