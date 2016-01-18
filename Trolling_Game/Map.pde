@@ -1,9 +1,10 @@
 
 class Map
 {
-}
-//draws the map
-public void mapLayoutOne()
+  Map()
+  {
+  }
+  private void layoutOne()
 {
   pushStyle();
   //noFill();
@@ -20,4 +21,5 @@ public void mapLayoutOne()
   line(1021,5,1002,148);      //TopMountain
   curve(1016,97,1003,147,1009,90,1238,16); //TopCave
   popStyle();
+}
 }

@@ -1,8 +1,83 @@
+boolean keys[]; 
+void arrayz()
+{
+
+
+  keys = new boolean[3]; 
+keys[0] = false;
+keys[1] = false;
+keys[2] = false;
+keys[3] = false;
+}
+void keyPressed()
+{
+  if(keyCode == UP)
+ {
+  keys[0] = true;
+  }
+  if(keyCode == DOWN)
+  {
+    keys[1] = true;
+  }
+  if(keyCode == LEFT)
+ {
+  keys[2] = true;
+  }
+  if(keyCode == RIGHT)
+  {
+    keys[3] = true;
+  }
+}
+void keyReleased()
+{
+  if(keyCode == UP)
+ {
+  keys[0] = false;
+  }
+  if(keyCode == DOWN)
+  {
+    keys[1] = false;
+  }
+  if(keyCode == LEFT)
+ {
+  keys[2] = false;
+  }
+  if(keyCode == RIGHT)
+  {
+    keys[3] = false;
+  }
+}
 class AppLogic
 {
+  AppLogic()
+  {
+  }
+  public char controller()
+{
+  char returnChar = 'æ';
+    if (keys[2])
+    {
+      returnChar = 'a';
+    } 
+    if (keys[3])
+    {
+      returnChar = 'd';
+    }
+    if (keys[0])
+    {
+      returnChar = 'w';
+    } 
+    if (keys[1])
+    {
+      returnChar = 's';
+    }
+    if (key == CONTROL)
+    {
+      returnChar = CONTROL;    
+    }
+  return returnChar;
 }
-//Checks keyboard inputs and returns them.
-public char controller()
+  public char controllerF()
 {
   char returnChar = 't';
   if (keyPressed)
@@ -69,22 +144,22 @@ public char controllerY()
 //What is gonna happen to the object
 public void ballMechanics()
 {
-  if (controllerY() == 'w' && movementY == 0)
+  if (keys[0] && movementY == 0) //UP
   {
 
     movementY -= 3.7;
   }
-  if (controllerY() == 's')
+  if (keys[1]) //DOWN
   {
   }
-  if (controllerX() == 'a')
+  if (keys[2]) //LEFT
   { 
     if (movementX >= -7)
     {
       movementX-= 0.3;
     }
   }
-  if (controllerX() == 'd')
+  if (keys[3]) //RIGHT
   {
     if (movementX <= 7)
     {
@@ -96,4 +171,5 @@ public void ballMechanics()
   {
     yPosBall -= 10;
   }
+}
 }
