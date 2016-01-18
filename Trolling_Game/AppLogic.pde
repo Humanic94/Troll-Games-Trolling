@@ -162,4 +162,22 @@ public void ballMechanics()
     yPosBall -= 10;
   }
 }
+public boolean failure() //på morro
+{
+  boolean gameOver = false;
+  if(yPosBall > (groundHeight + 100))
+  {
+    gameOver = true;
+  }
+  return gameOver;
+}
+public void gameOver()
+{
+    if(failure())
+    {
+    textSize(32);
+    background(244,8,8);
+    text("Game Over GLHF Inge", 342, 263);
+    }
+}
 }

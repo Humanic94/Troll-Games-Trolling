@@ -7,6 +7,7 @@ boolean keys[];
 AppLogic appLogic;
 Map map;
 Player troll;
+Gravity gravity;
 void setup()
 {
   size(1024, 500);
@@ -14,6 +15,7 @@ void setup()
   appLogic = new AppLogic();
   map = new Map();
   troll = new Player();
+  gravity = new Gravity();
  
   keys = new boolean[4]; 
   keys[0] = false;
@@ -30,7 +32,7 @@ void draw()
   //appLogic.ballMechanics();
   xPosBall += movementX;
   yPosBall += movementY;
-  resistance();
-  failure();
- gameOver();
+  gravity.resistance();
+  appLogic.failure();
+  appLogic.gameOver();
 }

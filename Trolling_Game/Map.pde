@@ -1,5 +1,16 @@
-int groundRight = 560;
-int groundHeight = 440;
+//map one variables/////////
+int groundRight = 560;    //
+int groundLeft = 40;      //
+int groundHeight = 440;   //
+int groundFJ = 381;       //
+int groundFJLeft = 645;   //
+int groundFJRight = 737; 
+int groundSJ = 335;
+int groundSJLeft = 477;
+int groundSJRight = 577;
+//
+////////////////////////////
+
 class Map
 {
   Map()
@@ -10,9 +21,9 @@ class Map
   pushStyle();
   //noFill();
   background(188, 191, 198);
-  line(groundRight, groundHeight, 40, groundHeight); //Ground
-  line(577, 335, 477, 335); //FirstJump
-  line(737, 381, 645, 381); //SecondJump
+  line(groundRight, groundHeight, groundLeft, groundHeight); //Ground
+  line(groundFJRight, groundFJ, groundFJLeft, groundFJ); //FirstJump
+  line(groundSJRight, groundSJ, groundSJLeft, groundSJ); //SecondJump
   line(753, 268, 645, 268); //ThirdJump
   line(588, 210, 484, 210); //FourthJump
   line(1024, 147, 650, 147); //FifhtJump
