@@ -11,5 +11,6 @@ void drawPlayer()
   ellipse(xPosBall, yPosBall, 30, 30);
   fill(0);
   strokeWeight(2);
+  appLogic.ballMechanics();
 }
 }

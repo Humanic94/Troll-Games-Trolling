@@ -3,7 +3,7 @@ float xPosBall = 71;
 float yPosBall = 425;
 float movementX = 0;
 float movementY = 0;
-
+boolean keys[]; 
 AppLogic appLogic;
 Map map;
 Player troll;
@@ -14,8 +14,8 @@ void setup()
   appLogic = new AppLogic();
   map = new Map();
   troll = new Player();
-  boolean keys[]; 
-  keys = new boolean[3]; 
+ 
+  keys = new boolean[4]; 
   keys[0] = false;
   keys[1] = false;
   keys[2] = false;
@@ -27,7 +27,7 @@ void draw()
 {
   map.layoutOne();
   troll.drawPlayer();
-  appLogic.ballMechanics();
+  //appLogic.ballMechanics();
   xPosBall += movementX;
   yPosBall += movementY;
   resistance();

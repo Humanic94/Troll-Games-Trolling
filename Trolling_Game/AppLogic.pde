@@ -1,14 +1,4 @@
-boolean keys[]; 
-void arrayz()
-{
 
-
-  keys = new boolean[3]; 
-keys[0] = false;
-keys[1] = false;
-keys[2] = false;
-keys[3] = false;
-}
 void keyPressed()
 {
   if(keyCode == UP)
