@@ -7,13 +7,16 @@ class WorldObject
   private float endPosX = 0;
 
 
-  public WorldObject(float startPosY, float startPosX, float endPosY, float endPosX)
+  public WorldObject(float endPosX, float endPosY, float startPosX, float startPosY)
   {
     this.startPosY = startPosY;
     this.startPosX = startPosX;
     this.endPosY = endPosY;
     this.endPosX = endPosX;
+    stroke(255);
+    strokeWeight(5);
     line(endPosX, endPosY,startPosX,startPosY);
+    
   }
   //Returns the positions of the object.
   public float getStartPosX()
