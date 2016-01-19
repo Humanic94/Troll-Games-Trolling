@@ -36,4 +36,22 @@ class WorldObject
     return endPosY;
   }
   
+  //Sets a new value for the field chosen.
+  public void setStartPosX(float startPosX)
+  {
+    this.startPosX = startPosX;
+  }
+  public void setStartPosY(float startPosY)
+  {
+    this.startPosY = startPosY;
+  }
+  public void setEndPosX(float endPosX)
+  {
+    this.endPosX = endPosX;
+  }
+  public void setEndPosY(float endPosY)
+  {
+    this.endPosY = endPosY;
+  }
+  
 }
