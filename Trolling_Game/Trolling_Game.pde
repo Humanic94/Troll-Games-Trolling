@@ -8,7 +8,7 @@ void setup()
 
 //Dåkke må lage en egen draw for testing mtp. endringer, lag en ny og kommenter ut etter bruk.
 //JØRGEN
-
+/*
 void draw()
 {  
   background(0,10,42);
@@ -24,5 +24,13 @@ void draw()
     {
       level.levelTwo();
     }
+  }
+}
+*/
+class Game
+{
+  //Constructor
+  public Game()
+  {
   }
 }
