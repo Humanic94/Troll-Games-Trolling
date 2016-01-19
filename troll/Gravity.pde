@@ -39,7 +39,7 @@ class Gravity
   {
     movementX = 3;
   }
-  
+                                  
   if(xPosBall >= groundRight && yPosBall == (groundHeight - 15)) //ball falls off the edge ground (on the right)
   {
     movementY = 2;
