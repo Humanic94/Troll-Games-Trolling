@@ -10,8 +10,8 @@ It is going to contain a list of objects to help build the entire level.
 class Level
 {
   private ArrayList<WorldObject> currentLevel;
-  private ArrayList<WorldObject> levelOne; 
-  private ArrayList<WorldObject> levelTwo; 
+  private ArrayList<WorldObject> levelOneScreenOne; 
+  private ArrayList<WorldObject> levelOneScreenTwo; 
   
   //Constructor
   public Level()
@@ -21,43 +21,53 @@ class Level
   //First level
   void levelOne() //First screenview of level One
   {
-    levelOne = new ArrayList<WorldObject>();
+    levelOneScreenOne = new ArrayList<WorldObject>();
     //currentLevel.clear;
     //background someKindOfImg.Png;
     
     //creates the objects of the level.
-    WorldObject ground = new WorldObject(560, 440, 40, 440); //Ground
-    WorldObject stoneOne = new WorldObject(577, 335, 477, 335); //FirstJump
-    WorldObject stoneTwo = new WorldObject(737, 381, 645, 381); //SecondJump
-    WorldObject stoneThree = new WorldObject(753, 268, 645, 268); //ThirdJump
-    WorldObject stoneFour = new WorldObject(588, 210, 484, 210); //FourthJump
-    WorldObject stoneFive = new WorldObject(1024, 147, 650, 147); //FifhtJump
-    WorldObject stoneSix = new WorldObject(753, 268, 645, 268); //Top
+    WorldObject start = new WorldObject(560, 440, 40, 440); //Ground floor
+    WorldObject stoneOne = new WorldObject(737, 380, 645, 380); //First stone
+    WorldObject stoneTwo = new WorldObject(577, 335, 477, 335); //Second stone
+    WorldObject stoneThree = new WorldObject(753, 268, 645, 268); //Third stone
+    WorldObject stoneFour = new WorldObject(588, 210, 484, 210); //Fourth stome
+    WorldObject finish = new WorldObject(1024, 147, 650, 147); //Top floor
     
     //Adds all the objects to the list.
     
-    levelOne.add(ground);
-    levelOne.add(stoneOne);
-    levelOne.add(stoneTwo);
-    levelOne.add(stoneThree);
-    levelOne.add(stoneFour);
-    levelOne.add(stoneFive);
-    levelOne.add(stoneSix);
+    levelOneScreenOne.add(start);
+    levelOneScreenOne.add(stoneOne);
+    levelOneScreenOne.add(stoneTwo);
+    levelOneScreenOne.add(stoneThree);
+    levelOneScreenOne.add(stoneFour);
+    levelOneScreenOne.add(finish);
     
     //Updates the level objects.
-    currentLevel = levelOne;
+    currentLevel = levelOneScreenOne;
   }
 
   void levelTwo() //Second screenview of level one
   {
-    levelTwo = new ArrayList<WorldObject>();
-    //currentLevel.clear;
-    //background someKindOfImg.Png; (Sprite)
-    //WorldObject groundOne = new WorldObject(22,145);
-    //WorldObject stoneOne = new WorldObject(11,2424);
-    WorldObject ground = new WorldObject(560, 440, 40, 440); //Ground
-    levelTwo.add(ground);
-    currentLevel = levelTwo;
+    levelOneScreenTwo = new ArrayList<WorldObject>();
+    WorldObject start = new WorldObject(300, 147, 0, 147); 
+    WorldObject first = new WorldObject(457, 250, 100, 250); 
+    WorldObject second = new WorldObject(100, 350, 0, 350); 
+    WorldObject third = new WorldObject(550, 440, 112, 440); 
+    WorldObject fourth = new WorldObject(594, 380, 663, 380); 
+    WorldObject fifht = new WorldObject(800, 320, 700, 320); 
+    WorldObject sixst = new WorldObject(831, 267, 1000, 267); 
+    WorldObject seventh = new WorldObject(660, 210, 531, 210); 
+    WorldObject finish = new WorldObject(1000, 147, 742, 147); 
+    levelOneScreenTwo.add(start);
+    levelOneScreenTwo.add(first);
+    levelOneScreenTwo.add(second);
+    levelOneScreenTwo.add(third);
+    levelOneScreenTwo.add(fourth);
+    levelOneScreenTwo.add(fifht);
+    levelOneScreenTwo.add(sixst);
+    levelOneScreenTwo.add(seventh);
+    levelOneScreenTwo.add(finish);
+    currentLevel = levelOneScreenTwo;
     
   }
   

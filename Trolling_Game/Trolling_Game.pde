@@ -12,7 +12,10 @@ void setup()
 void draw()
 {  
   background(0,10,42);
+  //Level level = new Level();
+  //level.levelTwo();
   //Skifter level med knapper (testing av funksjonalitet)
+  
   if(keyPressed)
   {
     Level level = new Level();
@@ -25,8 +28,10 @@ void draw()
       level.levelTwo();
     }
   }
+  
 }
 */
+
 class Game
 {
   //Constructor
